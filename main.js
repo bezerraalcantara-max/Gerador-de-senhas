@@ -14,19 +14,30 @@ function diminuiTamanho() {
         // tamanhoSenha = tamanhoSenha - 1;
         tamanhoSenha--;
     }
-    numeroSenha.textContent = tamanhoSenha;
+    numeroSenha.textContent = tamanhoSenha;//atribui o tamanho senha ao numeroSenha
+    geraSenha();
 }
 
 
 
 function aumentaTamanho() {
     if (tamanhoSenha < 20) {
-            // tamanhoSenha = tamanhoSenha + 1;
+            // tamanhoSenha = tamanhoSenha + 1; //aumenta de 1 o valor do tamanhoSenha
             tamanhoSenha++;
     }
-    numeroSenha.textContent = tamanhoSenha;
+    numeroSenha.textContent = tamanhoSenha;//atribui o tamanho senha ao numeroSenha
+    geraSenha();
 }
 
+function geraSenha(){
+let senha = '';
+for (let i = 0; i < tamanhoSenha;i++){
+        let numeroAleatorio = Math.random()*letrasMaiusculas.length;
+        numeroAleatorio = Math.floor(numeroAleatorio);
+        senha = senha + letrasMaiusculas[numeroAleatorio];
+}
+campoSenha.value = senha;
+}
 
 console.log(botoes);
 
