@@ -1,5 +1,5 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto');//seleciona o
-let tamanhoSenha = 12;//variavel que pode ser alterada
+let tamanhoSenha = 5;//variavel que pode ser alterada
 
 numeroSenha.textContent = tamanhoSenha;//atribui o tamanho Senha ao numeroSenha
 
